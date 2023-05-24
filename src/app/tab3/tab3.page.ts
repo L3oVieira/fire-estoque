@@ -42,7 +42,7 @@ export class Tab3Page {
 
         this.bookingForm.reset();
 
-        this.router.navigate(['/']);
+        this.router.navigate(['/tabs/tab2']);
 
       }).catch((error: any) => console.log(error));
         return;

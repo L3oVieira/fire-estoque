@@ -1,17 +1,28 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="medium">
     <ion-title>
       Lista de Produtos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content class="ion-margin">
+  <ion-grid class="ion-margin">
+    <ion-row>
+      <ion-col>Nome  </ion-col>
+      <ion-col>Descrição  </ion-col>
+      <ion-col>  Preço  </ion-col>
+      <ion-col>Opt </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let product of producstDb">
+      <ion-col>{{ product.name }}</ion-col>
+      <ion-col>{{ product.desc }}</ion-col>
+      <ion-col>{{ product.price }}</ion-col>
+      <div class="item-note" item-end>
+        <button ion-button clear (click)="deleteBooking(product.key)">
+          <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+    </ion-row>
+  </ion-grid>
 </ion-content>
