@@ -1,8 +1,7 @@
 # FireEstoque
 **Atividade Prática 14 - Adicionando Push Notification**
 
-Aplicação desenvolvida com Ionic/Angular com intuito de entender as operações 
-de básicas de CRUD utilizando o banco de dados Realtime Database do Firebase.
+Aplicação desenvolvida com Ionic/Angular com intuito de entender as operações básicas de CRUD utilizando o banco de dados Realtime Database do Firebase.
 
 Tecnologias utilizadas:
 - Angular 15
