@@ -1,17 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+    <ion-title class="ios title-ios hydrated">Cadastrar no Estoque</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-list lines="full">
+    <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+
+      <ion-item>
+        <label>Nome: </label>
+        <ion-input formControlName="name" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <label position="floating">Descrição: </label>
+        <ion-input formControlName="desc" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <label position="floating">Preço: </label>
+        <ion-input formControlName="price" type="number" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Salvar</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+
+  </ion-list>
+
 </ion-content>
