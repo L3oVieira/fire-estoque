@@ -10,10 +10,9 @@ export class Tab2Page implements OnInit {
   producstDb: Product[] = [];
   constructor(
     private aptService: ProductService
-    
+
   ) { }
   ngOnInit() {
-    this.fetchProducts();
     let produtcsDb = this.aptService.getProductList();
     produtcsDb.snapshotChanges().subscribe(res => {
       this.producstDb = [];
@@ -28,16 +27,17 @@ export class Tab2Page implements OnInit {
 
   fetchProducts() {
     this.aptService.getProductList().valueChanges().subscribe(res => {
-      console.log(res)
+      console.log("Lista de produtos recebida: ", res);
     })
   }
 
   deleteBooking(key: string) {
     console.log(key)
-    if (window.confirm('Do you really want to delete?')) {
-      this.aptService.deleteBooking(key)
+    if (window.confirm('Tem certeza que quer deletar?')) {
+      this.aptService.deleteBooking(key);
+      console.log("Produto deletado: ", key);
     }
   }
 }
 
-  
+

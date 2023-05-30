@@ -37,8 +37,7 @@ export class Tab3Page {
 
       this.aptService.createProduct(this.bookingForm.value).then((res: any) => {
 
-        console.log(res);
-        console.log("Enviado: ", this.bookingForm.value);
+        console.log("Enviado: ", res);
 
         this.bookingForm.reset();
 
